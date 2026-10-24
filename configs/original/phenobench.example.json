@@ -1,0 +1,22 @@
+{
+  "data_root": "data/PhenoBench",
+  "flux_model": "models/FLUX.2-klein-base-4B",
+  "validation_selection": "data/phenobench_validation_selection.csv",
+  "s7_adapters": {
+    "20260723": {
+      "path": "models/phenobench_s7/seed_20260723/pytorch_lora_weights.safetensors",
+      "sha256": "fb6f0f5bac3543ba848af44df12b4b5fc1d5c58bf274a3dfca2a694227c03924",
+      "kind": "published_frozen"
+    },
+    "20260724": {
+      "path": "models/phenobench_s7/seed_20260724/pytorch_lora_weights.safetensors",
+      "sha256": "feebcce77b90f14fa0a458a05e4e8ca93da618f4c5a1625a84d2e30fee46a431",
+      "kind": "published_frozen"
+    },
+    "20260725": {
+      "path": "models/phenobench_s7/seed_20260725/pytorch_lora_weights.safetensors",
+      "sha256": "b54b1eebcf7f5e50dc56882ce9656b438f5af806c73759e4a5ea5ec0404fed45",
+      "kind": "published_frozen"
+    }
+  }
+}

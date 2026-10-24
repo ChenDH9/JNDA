@@ -1,0 +1,29 @@
+{
+  "source_ref": "35f471120d6266b7792ef2cb1ef6843c25ecb64a",
+  "files": [
+    {
+      "source_filename": "S8R_Ex01_cleanroom_joint_native_replication_v1_1.yaml",
+      "source_git_blob": "41fe12bd794234f3af6a2d070fc7fb2b2de12875",
+      "source_sha256": "9bc34df44d893d89f810c66166a085ed1c7e4931bd5b88dc55d1e29bd44603bb",
+      "public_target": "configs/original/cropandweed_recipe.json",
+      "adaptation": "Scientific config sections retained; historical workflow sections and private evidence paths omitted.",
+      "public_sha256": "695bf8c066749aca24741c1e6bb6da163d7fe211d4003a510c2abe2fbecb5086"
+    },
+    {
+      "source_filename": "S8_Ex01_native_field_readout.yaml",
+      "source_git_blob": "79f807370ee769d6aae044800baedc28d4f8517e",
+      "source_sha256": "2935894d1a3c8c7a894bc6f01f2ad422c28d6b71f182e5e86715e885d89b2b5d",
+      "public_target": "configs/original/phenobench_recipe.json",
+      "adaptation": "Scientific config sections retained; historical workflow sections and private evidence paths omitted.",
+      "public_sha256": "9f9b3e6defd5f4bb8a5af827c8f47cf7bbb450c97c7942cd3ebd5cea253f682c"
+    },
+    {
+      "source_filename": "S7_Ex01_phenobench_rgb_lora.yaml",
+      "source_git_blob": "8fcd9a71355acb1c2ae1021750c459eb677e92c9",
+      "source_sha256": "43fbd863a90df986ad5aac90db8c1721b9902a08a2b14065567ec7740261ca24",
+      "public_target": "configs/original/phenobench_s7_prerequisite_recipe.json",
+      "adaptation": "Scientific config sections retained; historical workflow sections and private evidence paths omitted.",
+      "public_sha256": "d4047955431852a2261134008be907931102ecb7f977dfb812baf4e6b2ef9d36"
+    }
+  ]
+}

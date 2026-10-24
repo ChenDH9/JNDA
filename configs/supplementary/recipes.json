@@ -1,0 +1,153 @@
+{
+  "backbone": {
+    "model_revision": "8c44a2fbef88fae175da65df054db0f901aa9747",
+    "transformer_VAE_LoRA_dtype": "bfloat16",
+    "VAE_context": "no_grad outside autocast",
+    "head_dtype": "float32",
+    "transformer_head_autocast": "bfloat16",
+    "attention_backend": "native",
+    "timestep": 0.999,
+    "guidance": 0.0,
+    "image_size": [
+      512,
+      512
+    ],
+    "native_feature_shape": [
+      1024,
+      128
+    ],
+    "projection_input_shape": [
+      1024,
+      3072
+    ],
+    "projection_input_cache_dtype": "float32"
+  },
+  "data": {
+    "train": 4821,
+    "development": 1206,
+    "primary": 844,
+    "final": 1163,
+    "class_weights": [
+      0.25,
+      1.3431242219633113,
+      1.4751680850839344
+    ],
+    "ignore_index": 255
+  },
+  "native_optimizer": {
+    "name": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "head_weight_decay": 0.01,
+    "head_bias_weight_decay": 0.0,
+    "gradient_clip_norm": 1.0,
+    "scheduler": "constant1",
+    "batch": 1,
+    "accumulation": 1
+  },
+  "routes": {
+    "T1": {
+      "description": "Frozen pretrained backbone, terminal linear readout",
+      "seeds": [
+        1701,
+        1702,
+        1703,
+        1704,
+        1705
+      ],
+      "epochs": 30,
+      "head": "Linear(128,768,bias=True)",
+      "head_parameters": 99072,
+      "head_lr": 0.001,
+      "feature": "terminal"
+    },
+    "T2": {
+      "description": "Frozen pretrained backbone, terminal spatial readout",
+      "seeds": [
+        1701,
+        1702,
+        1703
+      ],
+      "epochs": 30,
+      "head": "SpatialHead(128)",
+      "head_parameters": 2592256,
+      "head_lr": 0.0003,
+      "feature": "terminal"
+    },
+    "T3": {
+      "description": "Joint fresh LoRA and terminal spatial readout",
+      "seeds": [
+        1701,
+        1702,
+        1703
+      ],
+      "initial_epochs": 10,
+      "conditional_epochs": 30,
+      "head": "SpatialHead(128)",
+      "head_parameters": 2592256,
+      "head_lr": 0.0003,
+      "LoRA_lr": 0.0001,
+      "LoRA_rank": 8,
+      "LoRA_alpha": 8,
+      "LoRA_dropout": 0.0,
+      "LoRA_weight_decay": 0.01,
+      "shared_T2_head_initialization": true
+    },
+    "T4": {
+      "description": "Frozen pretrained backbone, projection-input spatial readout",
+      "seeds": [
+        1701,
+        1702,
+        1703
+      ],
+      "epochs": 30,
+      "head": "SpatialHead(3072)",
+      "head_parameters": 3345920,
+      "head_lr": 0.001,
+      "feature": "projection-input"
+    },
+    "B1": {
+      "description": "UPerNet with ConvNeXt-Tiny pretrained on ADE20K",
+      "seeds": [
+        1701,
+        1702,
+        1703,
+        1704,
+        1705
+      ],
+      "epochs": 40,
+      "lr": 0.0001,
+      "microbatch": 4,
+      "accumulation": 2,
+      "tail_microbatches": [
+        3,
+        2
+      ],
+      "updates_per_epoch": 603,
+      "weight_decay": 0.05,
+      "stage_decay": 0.9,
+      "warmup_updates": 1500,
+      "warmup_start_factor": 1e-06,
+      "poly_power": 1.0,
+      "auxiliary_loss_weight": 0.4
+    }
+  },
+  "checkpoint_selection": {
+    "retained": "epoch10 plus maximum complete-development pooled mIoU",
+    "exact_tie": "earlier_epoch"
+  },
+  "conditional_training_budget": {
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "statistic": "equal-seed mean of best epochs6..10 minus best epochs1..5",
+    "strict_threshold": 0.002,
+    "result": "extend all three from10 to30 once, preserving optimizer/scheduler/RNG",
+    "further_extension": false
+  }
+}

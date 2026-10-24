@@ -1,0 +1,72 @@
+[
+  {
+    "id": "S7_steps1_minus_S7_steps10",
+    "left": "S7_steps1",
+    "right": "S7_steps10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  },
+  {
+    "id": "S7_steps2_minus_S7_steps10",
+    "left": "S7_steps2",
+    "right": "S7_steps10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  },
+  {
+    "id": "S7_steps4_minus_S7_steps10",
+    "left": "S7_steps4",
+    "right": "S7_steps10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  },
+  {
+    "id": "JNDA_t050_minus_JNDA_t0999",
+    "left": "JNDA_t050",
+    "right": "JNDA_t0999",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  },
+  {
+    "id": "JNDA_t075_minus_JNDA_t0999",
+    "left": "JNDA_t075",
+    "right": "JNDA_t0999",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  },
+  {
+    "id": "JNDA_short_minus_JNDA_t0999",
+    "left": "JNDA_short",
+    "right": "JNDA_t0999",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  },
+  {
+    "id": "JNDA_empty_minus_JNDA_t0999",
+    "left": "JNDA_empty",
+    "right": "JNDA_t0999",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ]
+  }
+]

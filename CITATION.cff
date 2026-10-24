@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: Please cite the associated JNDA study when using this software.
+type: software
+title: JNDA for direct crop weed segmentation
+authors:
+  - family-names: Chen
+    given-names: Dinghao
+  - family-names: Guo
+    given-names: Haoji
+  - family-names: Liu
+    given-names: Wen
+  - family-names: Li
+    given-names: Li
+license: MIT
+repository-code: https://github.com/ChenDH9/JNDA
+version: 1.0.0
+date-released: 2026-10-25

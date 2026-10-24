@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "data_root": "data/CropAndWeed/WACV2023",
+    "manifest_dir": "data/manifests/cropandweed",
+    "flux_model": "models/FLUX.2-klein-base-4B",
+    "segformer_checkpoint": "models/segformer_mit-b2_512x512_160k_ade20k_20210726_112103-cbd414ac.pth"
+  },
+  "training": {
+    "Fresh_S7": {
+      "learning_rate": 0.0001
+    }
+  }
+}

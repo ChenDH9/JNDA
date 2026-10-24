@@ -1,0 +1,326 @@
+{
+  "canonical_palette": {
+    "background/soil": [
+      0,
+      0,
+      0
+    ],
+    "crop": [
+      34,
+      139,
+      34
+    ],
+    "weed": [
+      255,
+      0,
+      255
+    ],
+    "ignore_serialization_only": [
+      0,
+      0,
+      0
+    ]
+  },
+  "prompt": {
+    "family": "descriptive_closed_set",
+    "text": "Create a spatially aligned three-class semantic segmentation mask of the input agricultural field image: soil/background black, crop plants green, weeds magenta. Flat solid colors only; no text, legend, shading, outlines, or photograph.",
+    "max_sequence_length": 512,
+    "may_not_change_after_freeze": true
+  },
+  "systems": {
+    "Fresh_S7": {
+      "role": "fresh RGB-LoRA generative comparator and Arm A precursor",
+      "initialization": "verified FLUX base plus seeded fresh rank-8 transformer LoRA; no task checkpoint",
+      "trainable": [
+        "transformer_lora"
+      ],
+      "old_task_checkpoints_allowed": false,
+      "inference": {
+        "steps": 10,
+        "guidance_scale": 4.0,
+        "scheduler": "FlowMatchEulerDiscreteScheduler",
+        "readout": "nearest canonical palette in sRGB",
+        "palette_tie_order": [
+          "background/soil",
+          "crop",
+          "weed"
+        ]
+      }
+    },
+    "Fresh_Arm_A": {
+      "role": "paired frozen-adapter native-interface arm",
+      "cleanroom_lineage": "for seed s, consume only the exact final Fresh_S7 adapter trained under this experiment for seed s; freeze base and that adapter; seed a new native head and train the head",
+      "paired_s7_checkpoint_is_not_historical_reuse": true,
+      "independent_or_cross_seed_s7_adapter_forbidden": true,
+      "trainable": [
+        "native_head"
+      ],
+      "old_task_checkpoints_allowed": false
+    },
+    "Fresh_Arm_B": {
+      "role": "fresh joint-native candidate",
+      "initialization": "verified FLUX base plus seeded fresh rank-8 transformer LoRA and seeded fresh native head",
+      "trainable": [
+        "transformer_lora",
+        "native_head"
+      ],
+      "old_task_checkpoints_allowed": false
+    },
+    "Fresh_SegFormer_B2": {
+      "role": "fresh strong supervised comparator",
+      "initialization": "verified public ADE20K checkpoint; every compatible encoder/decode tensor loaded; only classifier replaced",
+      "trainable": [
+        "full_segformer",
+        "three_class_classifier"
+      ],
+      "old_task_checkpoints_allowed": false
+    }
+  },
+  "native_field": {
+    "resolution": 512,
+    "geometry": "resize_full_square_no_crop",
+    "rgb_interpolation": "bilinear",
+    "label_interpolation": "nearest",
+    "rgb_normalization": "minus_one_to_one",
+    "vae_latent_call": "vae.encode(x).latent_dist.mode()",
+    "patchify": "2x2",
+    "packed_shape": [
+      1,
+      1024,
+      128
+    ],
+    "img_id_formula": "[0,h,w,0]",
+    "timestep": 0.999,
+    "timestep_dtype": "float32",
+    "guidance": 0.0,
+    "guidance_dtype": "float32",
+    "transformer_forwards": 1,
+    "native_output_index": 0,
+    "native_shape": [
+      1,
+      1024,
+      128
+    ],
+    "vae_decoder_calls": 0
+  },
+  "native_head": {
+    "type": "Linear",
+    "in_features": 128,
+    "out_features": 768,
+    "bias": true,
+    "parameter_count": 99072,
+    "patch_size": 16,
+    "classes": 3,
+    "unpatchify_reshape": [
+      "B",
+      32,
+      32,
+      16,
+      16,
+      3
+    ],
+    "unpatchify_permute": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5
+    ],
+    "logits_shape": [
+      "B",
+      3,
+      512,
+      512
+    ],
+    "inference": "argmax_dim_1"
+  },
+  "training": {
+    "estimand": "fresh clean-room equal-labeled-pass replication; architecture-appropriate optimization is frozen and compute is reported",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "formal_system_seed_cells": 20,
+    "epochs": 10,
+    "resume_after_epochs": 5,
+    "checkpoint_every_epochs": 5,
+    "final_checkpoint_only_for_scientific_use": true,
+    "validation_checkpoint_selection": false,
+    "validation_early_stopping": false,
+    "development_use": "structural QA and descriptive metrics only; no checkpoint, threshold, prompt, architecture, or hyperparameter selection",
+    "seed_order": "sha256(task_id NUL seed NUL epoch NUL sample_id)",
+    "inference_sample_seed": "first 8 bytes of SHA256(seed NUL sample_id), big-endian, modulo 2^63-1",
+    "fresh_process_resume": true,
+    "mixed_precision": "bf16",
+    "labeled_passes_per_system_seed": 10,
+    "class_weights_sha256": "e9b9bb6105b35cccee97b1f367ff7200ea6aa171947d9c84292644a6427dffd5",
+    "class_weights": [
+      0.25,
+      1.3431242219633113,
+      1.4751680850839344
+    ],
+    "ignore_index": 255,
+    "common_discriminative_loss": "weighted cross entropy in float32, mean over non-ignore pixels",
+    "Fresh_S7": {
+      "final_optimizer_steps": 48210,
+      "midpoint_optimizer_steps": 24105,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 1,
+      "rank": 8,
+      "lora_alpha": 8,
+      "lora_dropout": 0.0,
+      "lora_target": "transformer_only",
+      "optimizer": "AdamW",
+      "learning_rate": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.01,
+      "scheduler": "constant",
+      "warmup_steps": 0,
+      "max_grad_norm": 1.0,
+      "augmentation": "none",
+      "condition_interpolation": "bilinear",
+      "target_interpolation": "nearest",
+      "loss": "diffusion MSE masked by nearest-downsampled valid-pixel mask; ignore pixels are serialized black but contribute zero loss",
+      "flow_matching": {
+        "weighting_scheme": "none",
+        "timestep_density": "uniform",
+        "logit_mean": 0.0,
+        "logit_std": 1.0,
+        "mode_scale": 1.29,
+        "training_guidance_scale": 4.0,
+        "vae_latent_statistic": "mode"
+      },
+      "gradient_checkpointing": true,
+      "cache_latents": false,
+      "cache_policy_reason": "on-the-fly deterministic VAE mode preserves epoch-specific registered sample order and exact per-sample valid-mask alignment",
+      "model_offload": false
+    },
+    "Fresh_Arm_A": {
+      "final_optimizer_steps": 48210,
+      "midpoint_optimizer_steps": 24105,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 1,
+      "base_frozen": true,
+      "paired_fresh_s7_lora_frozen": true,
+      "head_learning_rate": 0.001,
+      "optimizer": "AdamW",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.01,
+      "scheduler": "constant",
+      "warmup_steps": 0,
+      "max_grad_norm": 1.0,
+      "augmentation": "none",
+      "cache_native_tokens": false,
+      "cache_policy_reason": "on-the-fly deterministic native tokens are bound to the same-seed Fresh S7 adapter"
+    },
+    "Fresh_Arm_B": {
+      "final_optimizer_steps": 48210,
+      "midpoint_optimizer_steps": 24105,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 1,
+      "rank": 8,
+      "lora_alpha": 8,
+      "lora_dropout": 0.0,
+      "lora_init": "gaussian",
+      "head_learning_rate": 0.001,
+      "lora_learning_rate": 0.0001,
+      "optimizer": "AdamW",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.01,
+      "scheduler": "constant",
+      "warmup_steps": 0,
+      "max_grad_norm": 1.0,
+      "augmentation": "none",
+      "cache_vae_tokens": false,
+      "cache_policy_reason": "on-the-fly deterministic VAE mode avoids shared-cache race across formal cells",
+      "gradient_checkpointing": true,
+      "attention_backend": "torch_sdpa"
+    },
+    "Fresh_SegFormer_B2": {
+      "final_optimizer_steps": 6030,
+      "midpoint_optimizer_steps": 3015,
+      "per_gpu_batch_size": 4,
+      "gradient_accumulation_steps": 2,
+      "effective_batch_size": 8,
+      "drop_last": false,
+      "optimizer": "AdamW",
+      "encoder_learning_rate": 6e-05,
+      "decoder_learning_rate_multiplier": 10.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "weight_decay": 0.01,
+      "no_weight_decay_parameter_kinds": [
+        "normalization",
+        "bias"
+      ],
+      "scheduler": "polynomial",
+      "polynomial_power": 1.0,
+      "warmup_fraction": 0.05,
+      "warmup_start_ratio": 1e-06,
+      "max_grad_norm": 1.0,
+      "augmentation": {
+        "random_horizontal_flip_probability": 0.5,
+        "random_vertical_flip_probability": 0.5,
+        "crop": false,
+        "rotation": false,
+        "random_scale": false,
+        "color_jitter": {
+          "brightness_factor": [
+            0.6,
+            1.4
+          ],
+          "contrast_factor": [
+            0.6,
+            1.4
+          ],
+          "saturation_factor": [
+            0.8,
+            1.2
+          ],
+          "hue_factor": [
+            -0.0125,
+            0.0125
+          ]
+        }
+      },
+      "normalization_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalization_std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "budget": {
+      "maximum_gpu_hours_per_seed": {
+        "Fresh_S7": 240,
+        "Fresh_Arm_A": 160,
+        "Fresh_Arm_B": 240,
+        "Fresh_SegFormer_B2": 48
+      },
+      "maximum_gpu_hours_all_attempts": 4000,
+      "budget_overrun_policy": "cell is FAILED; no silent extension or substitution"
+    }
+  }
+}

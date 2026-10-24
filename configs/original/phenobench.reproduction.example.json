@@ -1,0 +1,19 @@
+{
+  "data_root": "data/PhenoBench",
+  "flux_model": "models/FLUX.2-klein-base-4B",
+  "validation_selection": "data/phenobench_validation_selection.csv",
+  "s7_adapters": {
+    "20260723": {
+      "kind": "public_s7_reproduction",
+      "manifest": "runs/phenobench/s7/seed_20260723/adapter_binding.json"
+    },
+    "20260724": {
+      "kind": "public_s7_reproduction",
+      "manifest": "runs/phenobench/s7/seed_20260724/adapter_binding.json"
+    },
+    "20260725": {
+      "kind": "public_s7_reproduction",
+      "manifest": "runs/phenobench/s7/seed_20260725/adapter_binding.json"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+"""Fixed PhenoBench native-training counts."""
+SEEDS = (20260723, 20260724, 20260725)
+
+
+TRAIN_COUNT = 1407
+
+
+FINAL_STEPS = 14070
+
+
+MIDPOINT_STEPS = 7035

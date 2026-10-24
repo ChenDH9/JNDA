@@ -1,0 +1,234 @@
+[
+  {
+    "id": "comparison_01",
+    "left": "Fresh_Arm_B",
+    "right": "T1__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "interpretation": "Original epoch10 protocol positioning; no generative-pretraining-origin causal claim"
+  },
+  {
+    "id": "comparison_02",
+    "left": "Fresh_Arm_B",
+    "right": "T1__dev_selected_1to30",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "interpretation": "Unequal training exposure/development-selection diagnostic, not pure same-budget architecture effect"
+  },
+  {
+    "id": "comparison_03",
+    "left": "T3__epoch10",
+    "right": "T2__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Paired initial head/order/commonLR, same epoch10 budget; local adapter-update effect"
+  },
+  {
+    "id": "comparison_04",
+    "left": "T3__dev_selected_1to30",
+    "right": "T2__dev_selected_1to30",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Both trained30 and same development-selection rule; retain epoch10 comparison separately"
+  },
+  {
+    "id": "comparison_05",
+    "left": "T2__epoch10",
+    "right": "T1__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Different head architecture/capacity and locked head LR; no isolated pure-capacity causal assertion"
+  },
+  {
+    "id": "comparison_06",
+    "left": "T2__dev_selected_1to30",
+    "right": "T1__dev_selected_1to30",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Different head architecture/capacity and locked head LR; no isolated pure-capacity causal assertion"
+  },
+  {
+    "id": "comparison_07",
+    "left": "T4__epoch10",
+    "right": "T2__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Feature width/head projection parameters also differ; not pure feature-layer attribution"
+  },
+  {
+    "id": "comparison_08",
+    "left": "T4__dev_selected_1to30",
+    "right": "T2__dev_selected_1to30",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Feature width/head projection parameters also differ; not pure feature-layer attribution"
+  },
+  {
+    "id": "comparison_09",
+    "left": "T2__epoch10",
+    "right": "Fresh_Arm_B",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "All three matched seeds only; selected30 versus original epoch10 is an optimization-sufficiency/variant diagnostic, not equal compute"
+  },
+  {
+    "id": "comparison_10",
+    "left": "T2__dev_selected_1to30",
+    "right": "Fresh_Arm_B",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "All three matched seeds only; selected30 versus original epoch10 is an optimization-sufficiency/variant diagnostic, not equal compute"
+  },
+  {
+    "id": "comparison_11",
+    "left": "T3__epoch10",
+    "right": "Fresh_Arm_B",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "All three matched seeds only; selected30 versus original epoch10 is an optimization-sufficiency/variant diagnostic, not equal compute"
+  },
+  {
+    "id": "comparison_12",
+    "left": "T3__dev_selected_1to30",
+    "right": "Fresh_Arm_B",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "All three matched seeds only; selected30 versus original epoch10 is an optimization-sufficiency/variant diagnostic, not equal compute"
+  },
+  {
+    "id": "comparison_13",
+    "left": "T4__epoch10",
+    "right": "Fresh_Arm_B",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "All three matched seeds only; selected30 versus original epoch10 is an optimization-sufficiency/variant diagnostic, not equal compute"
+  },
+  {
+    "id": "comparison_14",
+    "left": "T4__dev_selected_1to30",
+    "right": "Fresh_Arm_B",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "All three matched seeds only; selected30 versus original epoch10 is an optimization-sufficiency/variant diagnostic, not equal compute"
+  },
+  {
+    "id": "comparison_15",
+    "left": "Fresh_Arm_B",
+    "right": "B1__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "interpretation": "Model-specific pretrained recipes and actual budgets; epoch count does not equal matched updates or compute"
+  },
+  {
+    "id": "comparison_16",
+    "left": "Fresh_SegFormer_B2",
+    "right": "B1__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "interpretation": "Same primary/512/taxonomy/metrics; model-specific optimization and augmentation remain explicit"
+  },
+  {
+    "id": "comparison_17",
+    "left": "Fresh_Arm_B",
+    "right": "B1__dev_selected_1to40",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "interpretation": "Model-specific pretrained recipes and actual budgets; epoch count does not equal matched updates or compute"
+  },
+  {
+    "id": "comparison_18",
+    "left": "Fresh_SegFormer_B2",
+    "right": "B1__dev_selected_1to40",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "interpretation": "Same primary/512/taxonomy/metrics; model-specific optimization and augmentation remain explicit"
+  },
+  {
+    "id": "comparison_19",
+    "left": "T3__epoch10",
+    "right": "B1__epoch10",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Supplementary comparison under different explicitly reported model-specific training configurations and budgets. Epoch10 does not equal matched optimization/compute; selected1to30 versus selected1to40 is not a same-budget adaptation attribution. Neither comparison replaces original JNDA or B1 results."
+  },
+  {
+    "id": "comparison_20",
+    "left": "T3__dev_selected_1to30",
+    "right": "B1__dev_selected_1to40",
+    "seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "interpretation": "Supplementary comparison under different explicitly reported model-specific training configurations and budgets. Epoch10 does not equal matched optimization/compute; selected1to30 versus selected1to40 is not a same-budget adaptation attribution. Neither comparison replaces original JNDA or B1 results."
+  }
+]

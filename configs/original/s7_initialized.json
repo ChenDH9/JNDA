@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "task_id": "S7INIT_CONTRACT_TRANSFER_v1",
+  "system": "S7_Init_JNDA",
+  "scientific_label": "S7-init JNDA",
+  "initialization": {
+    "base_model": "black-forest-labs/FLUX.2-klein-base-4B",
+    "base_revision": "8c44a2fbef88fae175da65df054db0f901aa9747",
+    "instantiate_through_fresh_jnda_path": true,
+    "initialize_native_head_before_s7_load": true,
+    "overwrite_only": "task_lora_tensor_values",
+    "source_system": "Fresh_S7",
+    "source_checkpoint_epoch": 10,
+    "same_seed_required": true,
+    "source_optimizer_state_loaded": false,
+    "source_scheduler_state_loaded": false,
+    "source_rng_state_loaded": false,
+    "source_step_counter_loaded": false
+  },
+  "training": {
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ],
+    "epochs": 10,
+    "checkpoint_epochs": [
+      5,
+      10
+    ],
+    "final_checkpoint_epoch": 10,
+    "optimizer_steps": 48210,
+    "input_resolution": [
+      512,
+      512
+    ],
+    "batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "lora_learning_rate": 0.0001,
+    "lora_weight_decay": 0.01,
+    "head_weight_learning_rate": 0.001,
+    "head_weight_decay": 0.01,
+    "head_bias_learning_rate": 0.001,
+    "head_bias_weight_decay": 0.0,
+    "scheduler": "constant",
+    "warmup_steps": 0,
+    "max_gradient_norm": 1.0,
+    "class_weights": [
+      0.25,
+      1.3431242219633113,
+      1.4751680850839344
+    ],
+    "ignore_index": 255,
+    "mixed_precision": "bfloat16",
+    "gradient_scaler": null,
+    "gradient_checkpointing": true,
+    "random_augmentation": false,
+    "lora_rank": 8,
+    "lora_alpha": 8,
+    "lora_dropout": 0.0,
+    "sample_order_namespace": "S8R_Ex01_cleanroom_joint_native_replication_v1_1"
+  },
+  "data": {
+    "train_count": 4821,
+    "train_sessions": 557,
+    "development_count": 1206,
+    "development_sessions": 140,
+    "replication_confirmation_count": 844,
+    "replication_confirmation_sessions": 92,
+    "final_method_test_count": 1163,
+    "final_method_test_sessions": 140,
+    "final_method_test_label_access_count_at_config_freeze": 0
+  },
+  "statistics": {
+    "primary_contrast": "S7_Init_JNDA-minus-Fresh_Arm_B",
+    "practical_margin_miou": 0.005,
+    "bootstrap_method": "paired_source_stratified_recording_session_cluster",
+    "bootstrap_draws": 10000,
+    "bootstrap_bit_generator": "PCG64",
+    "bootstrap_seed": 2026082301,
+    "confidence": 0.95,
+    "interval": "two-sided_percentile"
+  },
+  "source_implementation_commit": "6d5a36a304b38b314d7b7076b2e12135723afcb3"
+}

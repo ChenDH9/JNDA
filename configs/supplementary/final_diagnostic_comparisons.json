@@ -1,0 +1,50 @@
+[
+  {
+    "id": "final_diagnostic_01",
+    "left": "S7_init_JNDA",
+    "right": "Fresh_JNDA",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  },
+  {
+    "id": "final_diagnostic_02",
+    "left": "S7_init_JNDA",
+    "right": "Frozen_readout",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  },
+  {
+    "id": "final_diagnostic_03",
+    "left": "S7_init_JNDA",
+    "right": "S7_RGB_mask",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  },
+  {
+    "id": "final_diagnostic_04",
+    "left": "S7_init_JNDA",
+    "right": "SegFormer_B2",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  }
+]

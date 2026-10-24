@@ -1,0 +1,117 @@
+{
+  "model": {
+    "canonical_name": "FLUX.2 [klein] 4B Base",
+    "repository": "black-forest-labs/FLUX.2-klein-base-4B",
+    "revision": "8c44a2fbef88fae175da65df054db0f901aa9747",
+    "local_root": "models/verified/black-forest-labs/FLUX.2-klein-base-4B/8c44a2fbef88fae175da65df054db0f901aa9747",
+    "pipeline_class": "Flux2KleinPipeline",
+    "local_files_only": true,
+    "official_trainer": "third_party/diffusers-official/examples/dreambooth/train_dreambooth_lora_flux2_klein_img2img.py",
+    "official_trainer_sha256": "6486a9d7b56264a047339c3e8291d0d55cae51266bb2c3c5d8d533872330e31e"
+  },
+  "canonical_palette": {
+    "background": [
+      0,
+      0,
+      0
+    ],
+    "crop": [
+      34,
+      139,
+      34
+    ],
+    "weed": [
+      255,
+      0,
+      255
+    ]
+  },
+  "prompt": {
+    "family": "descriptive_closed_set",
+    "text": "Create a spatially aligned three-class semantic segmentation mask of the input field image: background black, crop plants green, weeds magenta. Flat solid colors only; no text, legend, shading, outlines, or photograph.",
+    "selection_basis": "frozen S4 non-oracle headline; no S7 validation use"
+  },
+  "training": {
+    "estimand": "equal-pass data-scaling",
+    "epochs": 10,
+    "resume_after_epochs": 5,
+    "checkpoint_every_epochs": 1,
+    "final_checkpoint_only_for_scientific_evaluation": true,
+    "validation_checkpoint_selection": false,
+    "seeds": [
+      20260723,
+      20260724,
+      20260725
+    ],
+    "seed_role": "LoRA initialization, diffusion noise, and deterministic within-subset order",
+    "resolution": 512,
+    "rank": 8,
+    "lora_alpha": 8,
+    "lora_dropout": 0.0,
+    "lora_target": "transformer_only",
+    "lora_target_module_count": 25,
+    "lora_target_modules_sha256": "5d6980c8a99e528164ab61a1aeb04de50cf1374ac1c96731d4e6f22f4d9571f6",
+    "train_batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0001,
+    "lr_scheduler": "constant",
+    "lr_warmup_steps": 0,
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 512,
+    "weighting_scheme": "none",
+    "guidance_scale": 1.0,
+    "mixed_precision": "bf16",
+    "gradient_checkpointing": true,
+    "cache_latents": true,
+    "model_offload": true,
+    "optimizer": "adamw",
+    "dataloader_workers": 0,
+    "center_crop": false,
+    "random_flip": false,
+    "condition_interpolation": "bilinear",
+    "target_interpolation": "nearest",
+    "fresh_process_resume": true
+  },
+  "preprocessing": {
+    "source_size": [
+      1024,
+      1024
+    ],
+    "inference_size": [
+      512,
+      512
+    ],
+    "geometry": "resize_full_square_no_crop",
+    "rgb_interpolation": "bilinear",
+    "label_interpolation": "nearest",
+    "center_crop": false,
+    "random_flip": false
+  },
+  "inference": {
+    "validation_manifest": "results/S4_Ex01_phenobench_zero_shot/expansion_500_manifest.json",
+    "validation_manifest_sha256": "ad1b755bfe23bde8838fe09e9333a5bd40e981a1bfd6a6971284e5397d77b9d5",
+    "validation_count": 500,
+    "source_group_count": 12,
+    "source_group_role": "official train/validation groups are disjoint; entire validation set is unseen-source-group",
+    "prompt_family": "descriptive_closed_set",
+    "seed": 20260721,
+    "per_sample_seed": "sha256(task_seed + sample_id) modulo 2^63",
+    "num_inference_steps": 10,
+    "guidance_scale": 4.0,
+    "scheduler": "FlowMatchEulerDiscreteScheduler",
+    "resolution": 512,
+    "dtype": "bfloat16",
+    "model_cpu_offload": false,
+    "decoder": "nearest_canonical_palette_euclidean_srgb",
+    "palette_tie_order": [
+      "background",
+      "crop",
+      "weed"
+    ],
+    "adapter_scale": 1.0,
+    "adapter_fused": false,
+    "base_s4_config": "configs/experiments/S4_Ex01_phenobench_zero_shot.yaml",
+    "base_s4_config_sha256": "b64ef73ed7f1ebbf9a8408508831acf45fd2aa40591b9f5f96316cc63e8f1ec2",
+    "base_inference_config_hash": "4c500b2565c9d4a4eb7ac4cf83353164d715f778ab80e021e4aa59a659e0b1ad"
+  }
+}

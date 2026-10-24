@@ -1,0 +1,310 @@
+{
+  "new_prediction_groups": 38,
+  "historical_prediction_groups": 20,
+  "rows": [
+    {
+      "route": "T1",
+      "seed": 1701,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1701,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 14,
+      "system": "T1__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1702,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1702,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 16,
+      "system": "T1__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1703,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1703,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 2,
+      "system": "T1__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1704,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1704,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 7,
+      "system": "T1__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1705,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T1",
+      "seed": 1705,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 22,
+      "system": "T1__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T2",
+      "seed": 1701,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T2__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T2",
+      "seed": 1701,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 24,
+      "system": "T2__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T2",
+      "seed": 1702,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T2__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T2",
+      "seed": 1702,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 24,
+      "system": "T2__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T2",
+      "seed": 1703,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T2__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T2",
+      "seed": 1703,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 29,
+      "system": "T2__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T3",
+      "seed": 1701,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T3__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T3",
+      "seed": 1701,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 28,
+      "system": "T3__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T3",
+      "seed": 1702,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T3__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T3",
+      "seed": 1702,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 12,
+      "system": "T3__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T3",
+      "seed": 1703,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T3__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T3",
+      "seed": 1703,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 17,
+      "system": "T3__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T4",
+      "seed": 1701,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T4__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T4",
+      "seed": 1701,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 30,
+      "system": "T4__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T4",
+      "seed": 1702,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T4__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T4",
+      "seed": 1702,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 25,
+      "system": "T4__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "T4",
+      "seed": 1703,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "T4__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "T4",
+      "seed": 1703,
+      "endpoint": "dev_selected_1to30",
+      "recorded_selected_epoch": 28,
+      "system": "T4__dev_selected_1to30",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1701,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "B1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1701,
+      "endpoint": "dev_selected_1to40",
+      "recorded_selected_epoch": 31,
+      "system": "B1__dev_selected_1to40",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1702,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "B1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1702,
+      "endpoint": "dev_selected_1to40",
+      "recorded_selected_epoch": 36,
+      "system": "B1__dev_selected_1to40",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1703,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "B1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1703,
+      "endpoint": "dev_selected_1to40",
+      "recorded_selected_epoch": 32,
+      "system": "B1__dev_selected_1to40",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1704,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "B1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1704,
+      "endpoint": "dev_selected_1to40",
+      "recorded_selected_epoch": 36,
+      "system": "B1__dev_selected_1to40",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1705,
+      "endpoint": "epoch10",
+      "recorded_selected_epoch": 10,
+      "system": "B1__epoch10",
+      "expected_images": 844
+    },
+    {
+      "route": "B1",
+      "seed": 1705,
+      "endpoint": "dev_selected_1to40",
+      "recorded_selected_epoch": 40,
+      "system": "B1__dev_selected_1to40",
+      "expected_images": 844
+    }
+  ]
+}

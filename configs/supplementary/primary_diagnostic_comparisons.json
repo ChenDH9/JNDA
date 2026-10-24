@@ -1,0 +1,38 @@
+[
+  {
+    "id": "primary_diagnostic_01",
+    "left": "Fresh_JNDA",
+    "right": "Frozen_readout",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  },
+  {
+    "id": "primary_diagnostic_02",
+    "left": "Fresh_JNDA",
+    "right": "S7_RGB_mask",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  },
+  {
+    "id": "primary_diagnostic_03",
+    "left": "Fresh_JNDA",
+    "right": "SegFormer_B2",
+    "seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705
+    ]
+  }
+]

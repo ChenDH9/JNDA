@@ -1,0 +1,102 @@
+﻿source_label_id,source_label_name,target_label_id,target_class_name,mapping_resolution_rule
+0,Soil,0,background/soil,task soil/background rule
+1,Maize,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+2,Maize two-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+3,Maize four-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+4,Maize six-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+5,Maize eight-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+6,Maize max,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+7,Sugar beet,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+8,Sugar beet two-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+9,Sugar beet four-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+10,Sugar beet six-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+11,Sugar beet eight-leaf stage,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+12,Sugar beet Max,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+13,Pea,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+14,Courgette,1,crop,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+15,Pumpkins,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+16,Radish,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+17,Asparagus,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+18,Potato,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+19,Flat leaf parsley,1,crop,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+20,Curly leaf parsley,1,crop,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+21,Cowslip,1,crop,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+22,Poppy,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+23,Hemp,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+24,Sunflower,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+25,Sage,1,crop,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+26,Common bean,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+27,Faba bean,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+28,Clover,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+29,Hybrid goosefoot,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+30,Black-bindweed,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+31,Cockspur grass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+32,Red-root amaranth,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+33,White goosefoot,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+34,Thorn apple,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+35,Potato weed,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+36,German chamomile,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+37,Saltbush,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+38,Creeping thistle,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+39,Field milk thistle,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+40,Purslane,2,weed,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+41,Black nightshade,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+42,Mercuries,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+43,Spurge,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+44,Pale persicaria,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+45,Geraniums,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+46,Cleavers,2,weed,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+47,Whitetop,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+48,Meadow-grass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+49,Frosted orach,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+50,Black horehound,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+51,Shepherds purse,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+52,Field bindweed,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+53,Common mugwort,2,weed,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+54,Hedge mustard,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+55,Groundsel,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+56,Speedwell,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+57,Broadleaf plantain,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+58,White ball-mustard,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+59,Peppermint,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+60,Field pennycress,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+61,Corn spurry,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+62,Purple crabgrass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+63,Common fumitory,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+64,Ivy-leaved speedwell,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+65,Annual meadow grass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+66,Redshank,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+67,Common hemp-nettle,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+68,Rough meadow-grass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+69,Green bristlegrass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+70,Small geranium,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+71,Cornflower,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+72,Common corn-cockle,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+73,Creeping crowfoot,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+74,Wall barley,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+75,Annual fescue,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+76,Purple dead-nettle,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+77,Ribwort plantain,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+78,Pineappleweed,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+79,Common chickweed,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+80,Hedge mustard,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+81,Soft brome,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+82,Wild pansy,2,weed,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+83,Yellow rocket,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+84,Common wild oat,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+85,Red poppy,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+86,Rye brome,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+87,Knotgrass,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+88,Prickly lettuce,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+89,Copse-bindweed,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+90,Manyseeds,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+91,Common buckwheat,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+92,Chives,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+93,Garlic,1,crop,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+94,Soybean,1,crop,official executable DATASETS['CropOrWeed2'].mapping has precedence
+95,Wild carrot,2,weed,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+96,Field mustard,2,weed,official executable DATASETS['CropOrWeed2'].mapping has precedence
+97,Giant fennel,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+98,Common horsetail,255,ignore/void,not in official current-species Tables 6/7 and not in executable CropOrWeed2 mapping; fail-closed without name-based inference
+99,Common dandelion,2,weed,official supplement Tables 6/7 current-species classification fills an ID omitted from the benchmark subset mapping
+255,Vegetation,255,ignore/void,main-paper ambiguous Vegetation fallback is operational ignore/void; supplemental W is not used as trustworthy crop/weed identity

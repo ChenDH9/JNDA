@@ -1,0 +1,25 @@
+{
+  "revision": "876ffc56b819a829448f7e81e9f8606deef6fb65",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "fcd6b589ee354422b80f8036c985f6874d7888fdca51a30bd12396b0c418bc53",
+      "bytes": 1554
+    },
+    {
+      "path": "config.json",
+      "sha256": "c7f6a85a6b69d57f363505d5019e0e34f8d7e272f238d3fc88b2fde202b0d279",
+      "bytes": 8755
+    },
+    {
+      "path": "model.safetensors",
+      "sha256": "cd55b1d36c6602d34f8cd300d7f788ea0fa5c3ed928e9ac98f353ecb31c7fa1d",
+      "bytes": 241053050
+    },
+    {
+      "path": "preprocessor_config.json",
+      "sha256": "6073ac6a37530ed2a19443d6a748f5579887b3ae48f6730073954b0b38cf3fd6",
+      "bytes": 372
+    }
+  ]
+}

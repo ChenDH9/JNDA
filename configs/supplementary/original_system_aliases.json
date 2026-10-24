@@ -1,0 +1,6 @@
+{
+  "Fresh_S7": "S7_RGB_mask",
+  "Fresh_Arm_A": "Frozen_readout",
+  "Fresh_Arm_B": "Fresh_JNDA",
+  "Fresh_SegFormer_B2": "SegFormer_B2"
+}

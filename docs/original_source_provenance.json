@@ -1,0 +1,230 @@
+{
+  "source_ref": "35f471120d6266b7792ef2cb1ef6843c25ecb64a",
+  "files": [
+    {
+      "source_git_blob": "134f132badbab60578af919d23a638f88c695b77",
+      "source_sha256": "a9d9edaa050ba816d89f869d1c9c9d5002a4dd2762f74174fc72b3d9168ef2d7",
+      "public_target": "src/researchos/s8r_ex01_training.py",
+      "adaptation": "Scientific definitions preserved; module docstring updated to describe the portable public entrypoint.",
+      "retained_definitions": null,
+      "scientific_ast_equivalence": true,
+      "public_sha256": "4b208e7631b939acd8ed7064892e6bf73cffc8e046f79790346fcb3b9b89fd1a"
+    },
+    {
+      "source_git_blob": "8ed04a2e917818c31d797809ee80c406285f8dc2",
+      "source_sha256": "d609b36f0b8b98957b0e216d96023296e99365f0dfc5e30356abd20199a8bcca",
+      "public_target": "src/researchos/s8r_ex01_evaluation.py",
+      "adaptation": "Exact source bytes; portable I/O bindings are supplied by researchos.portable_original.",
+      "retained_definitions": null,
+      "scientific_ast_equivalence": true,
+      "public_sha256": "d609b36f0b8b98957b0e216d96023296e99365f0dfc5e30356abd20199a8bcca"
+    },
+    {
+      "source_git_blob": "bda219573ea62a81ed49e3e5bfbb8f98f0d947c9",
+      "source_sha256": "d3c07eafc450b6455bbecbbcacce4b54edf30c3f273dcf33dc3afb5602991bbe",
+      "public_target": "src/researchos/s8r_ex01_execution.py",
+      "adaptation": "Exact selected definitions; excludes private authorization, git/environment receipt verification and label-release authorization.",
+      "retained_definitions": [
+        "TASK_ID",
+        "SYSTEMS",
+        "FORMAL_SEEDS",
+        "ENGINEERING_SMOKE_SEED",
+        "TRAIN_SPLIT",
+        "DEVELOPMENT_SPLIT",
+        "REPLICATION_SPLIT",
+        "FINAL_METHOD_TEST_SPLIT",
+        "FORBIDDEN_OPTIMIZER_SPLITS",
+        "EXPECTED_CONFIRMATION_COUNT",
+        "EXPECTED_FORMAL_CELLS",
+        "EXPECTED_JOINT_PREDICTIONS",
+        "H4_BOOTSTRAP_SEED",
+        "H4_BOOTSTRAP_DRAWS",
+        "S8RContractError",
+        "SplitAccessError",
+        "TransactionError",
+        "canonical_json_bytes",
+        "canonical_json_sha256",
+        "sha256_file",
+        "cell_id",
+        "SplitAccessGuard",
+        "run_development_forward_only",
+        "seed_all",
+        "dataloader_worker_init",
+        "capture_rng_state",
+        "restore_rng_state",
+        "stable_sample_order",
+        "_median",
+        "_geometric_mean",
+        "_validated_latency_map",
+        "h4_point_estimate",
+        "h4_bootstrap",
+        "expected_prediction_keys",
+        "validate_joint_prediction_inventory",
+        "hypothesis_statuses"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "9fbca5251a84b79ab7b7fc9ea8a8190917486f08f21b4ab42841a90f52bab294"
+    },
+    {
+      "source_git_blob": "56690a774b1e59558aed134e859bd85c3d276b26",
+      "source_sha256": "3fa5a7888f99728ab6fcf73ee985c4d998319c48898f3cca773312bdb5f44f26",
+      "public_target": "src/researchos/s6_supervised.py",
+      "adaptation": "Exact SegFormer architecture, checkpoint mapping and strict loader definitions; excludes unrelated historical workflows.",
+      "retained_definitions": [
+        "OPENMMLAB_SEGFORMER_B2_SHA256",
+        "sha256_file",
+        "_segformer_class",
+        "build_openmmlab_segformer_b2",
+        "_translate_openmmlab_encoder_key",
+        "map_openmmlab_segformer_b2_state",
+        "load_openmmlab_segformer_b2_checkpoint",
+        "_normalize_state_dict"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "5a894db055d222813436f955fb23c2c38de762f71d6ee430105d1b61a9f03428"
+    },
+    {
+      "source_git_blob": "fc799109ebd1324de118d5beabf59c85b4824078",
+      "source_sha256": "8ddd94a88e50236f24b5a0ef9e91e1b211097b6692bc5bad3296d5de651dc8b6",
+      "public_target": "src/researchos/flux2_klein_i2i/real_trainer.py",
+      "adaptation": "Retains the exact lora_target_modules function only; excludes private machine bindings and old trainer orchestration.",
+      "retained_definitions": [
+        "lora_target_modules"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "82f073cc8d0a4f749c4ab974874657f86b98fec6138bf3be5a264df01a37d136"
+    },
+    {
+      "source_git_blob": "915cc79063f67f0fc769395eeb4ed863bb81ca6b",
+      "source_sha256": "351749deef0995f81ec2e541ab755224c80ef25e30385aadc6013f06880633b0",
+      "public_target": "src/researchos/original_partitions.py",
+      "adaptation": "Exact pure partition functions and constants; data metadata is supplied by the public CSV.",
+      "retained_definitions": [
+        "SPLIT_SALT",
+        "SPLIT_NAMES",
+        "SPLIT_RATIOS",
+        "allocate_quotas",
+        "session_sort_key",
+        "sample_sort_key",
+        "sha256_lines",
+        "sha256_bytes"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "df06dca06ef788ef3809cfc4b9448a5d0b3d7e80a390d0295d56f33fef95e154"
+    },
+    {
+      "source_git_blob": "c8a25cdb286ffef0b8ec362ea1b963b945d108a9",
+      "source_sha256": "a786f5215236949de4c3816b6b95ae6334f1a218273324645d3c2f52b1e5dc28",
+      "public_target": "src/researchos/s8_native_training.py",
+      "adaptation": "Exact native-training, optimizer, cache loading and checkpoint source bytes.",
+      "retained_definitions": null,
+      "scientific_ast_equivalence": true,
+      "public_sha256": "a786f5215236949de4c3816b6b95ae6334f1a218273324645d3c2f52b1e5dc28"
+    },
+    {
+      "source_sha256": "3ddcde316144ba1d1890e8eb3043c829e87ceb0394f366a649e10f0edc028473",
+      "public_target": "src/researchos/s8_config.py",
+      "adaptation": "Exact constants only.",
+      "retained_definitions": [
+        "SEEDS",
+        "TRAIN_COUNT",
+        "FINAL_STEPS",
+        "MIDPOINT_STEPS"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "62a90b734bc5e374279d49356346ba9acebe73a9341d50b3ec6fd0e9dfa970f0",
+      "source_git_blob": "f562f86c98664c5c520e1c463d1300af58cf622a"
+    },
+    {
+      "source_git_blob": "7e5b7ae8fa12bb1b7e6a282d766f7eebccf290a1",
+      "source_sha256": "1f77855b5a2c942fc5114927dba7f67b9be8c441b637519f9a0d9be4932d3cf9",
+      "public_target": "src/researchos/s8_runtime.py",
+      "adaptation": "Exact representation/pipeline definitions; generic defaults for externally configured ROOT and MODEL_ROOT; archival cache/asset authorization functions omitted.",
+      "retained_definitions": [
+        "PROMPT",
+        "PALETTE",
+        "EXPECTED_ADAPTER_SHA256",
+        "EXPECTED_ATTENTION_PROCESSORS",
+        "LORA_TARGET_MODULES_SHA256",
+        "_resize_rgb_and_tensor",
+        "_label_from_rgb",
+        "exact_vae_packed_tokens",
+        "_load_transformer_pipeline"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "e8663e5f5c8aa2cac1ea01ea243c2c4ae1112d3dd4f7c472fa45b1a45801bdae"
+    },
+    {
+      "source_git_blob": "217e7308ca20d11eabb23c40879e64461cbe3b78",
+      "source_sha256": "e362c81c5c30e23af53725fa68c22fa759add90d37d30dba8bef199d8baf3a64",
+      "public_target": "src/researchos/original_partitions.py",
+      "adaptation": "Exact selected scientific definitions; no operational archive content.",
+      "retained_definitions": [
+        "COST_SALT",
+        "TASK_ID",
+        "build_cost_manifest"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "df06dca06ef788ef3809cfc4b9448a5d0b3d7e80a390d0295d56f33fef95e154"
+    },
+    {
+      "source_git_blob": "56690a774b1e59558aed134e859bd85c3d276b26",
+      "source_sha256": "3fa5a7888f99728ab6fcf73ee985c4d998319c48898f3cca773312bdb5f44f26",
+      "public_target": "src/researchos/phenobench_labels.py",
+      "adaptation": "Exact selected scientific definitions; no operational archive content.",
+      "retained_definitions": [
+        "task_label_array"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "f9e1adfb21ac49fda6d25da47e3b09f08edfd247a4be30225fdb2b464afa6906"
+    },
+    {
+      "source_git_blob": "fc799109ebd1324de118d5beabf59c85b4824078",
+      "source_sha256": "8ddd94a88e50236f24b5a0ef9e91e1b211097b6692bc5bad3296d5de651dc8b6",
+      "public_target": "src/researchos/phenobench_s7_bridge.py",
+      "adaptation": "Exact selected scientific definitions; portable caller supplies runtime asset locations.",
+      "retained_definitions": [
+        "_load_official_module",
+        "_pil_to_normalized_tensor",
+        "build_deterministic_batch_sampler_class",
+        "build_official_arguments",
+        "_install_metrics_accelerator",
+        "_metric_summary",
+        "_checkpoint_inventory",
+        "sha256_file"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "d2d106a20cf095b4be885f43554b9095a2fef820297508bbc9acb1a24b193f0a"
+    },
+    {
+      "source_git_blob": "921d3ae368da9603b14b018586fc7ecd4d248b1e",
+      "source_sha256": "8210e3f9f90a8819c5bd5321ba30fdc74f8e3baeaf075483bf5256f6e7558411",
+      "public_target": "src/researchos/phenobench_s7_bridge.py",
+      "adaptation": "Exact selected scientific definitions; portable caller supplies runtime asset locations.",
+      "retained_definitions": [
+        "_stable_seed_order",
+        "build_scientific_dataset_class"
+      ],
+      "scientific_ast_equivalence": true,
+      "public_sha256": "d2d106a20cf095b4be885f43554b9095a2fef820297508bbc9acb1a24b193f0a"
+    },
+    {
+      "source_git_blob": "b8ef1bebd629d3856b4e297160758653a235fbbf",
+      "source_sha256": "d948ac87ae74116606d354c8778887ff5785fd89cebad21b725201361c1218da",
+      "public_target": "src/researchos/flux2_klein_i2i/paired_transforms.py",
+      "adaptation": "Exact selected scientific definitions; portable caller supplies runtime asset locations.",
+      "retained_definitions": null,
+      "scientific_ast_equivalence": true,
+      "public_sha256": "d948ac87ae74116606d354c8778887ff5785fd89cebad21b725201361c1218da"
+    },
+    {
+      "source_git_blob": "40aff272373e81426ac88a40339746d61db9efd9",
+      "source_sha256": "e35f36135ff86ea97ea7e1366a94fbf65a66c523ccaf2e4fd452cb2bf1554492",
+      "public_target": "src/researchos/metrics/segmentation.py",
+      "adaptation": "Exact selected scientific definitions; portable caller supplies runtime asset locations.",
+      "retained_definitions": null,
+      "scientific_ast_equivalence": true,
+      "public_sha256": "e35f36135ff86ea97ea7e1366a94fbf65a66c523ccaf2e4fd452cb2bf1554492"
+    }
+  ]
+}
